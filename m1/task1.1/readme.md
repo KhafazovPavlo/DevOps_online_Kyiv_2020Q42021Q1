@@ -81,7 +81,7 @@ git commit
 ```
 git checkout develop
 git merge images
-```	
+```
 	Next I’ve merged “styles” into “develop” and got merge conflict in m1/task1.1/index.html.
 	
 ![Image6](screenshots/Image6.jpg "Image6")
@@ -119,7 +119,7 @@ git commit
 git push origin –all
 ```
 ## What is DevOps
-DevOps is an approach to building and delivering computer software in which everyone works together. This term is a combination of two – “Development” and “Operations”.  DevOps allows for faster delivery to production by implementing and leveraging automated processes. The idea is to design and build all the parts up front, in a way that allows all the pieces to fit together
+DevOps is an approach to building and delivering computer software in which everyone works together. This term is a combination of two – “Development” and “Operations”.  DevOps allows for faster delivery to production by implementing and leveraging automated processes. The idea is to design and build all the parts up front, in a way that allows all the pieces to fit together.
 
 	
 
