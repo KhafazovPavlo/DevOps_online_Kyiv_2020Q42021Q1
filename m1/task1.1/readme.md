@@ -82,15 +82,15 @@ git commit
 git checkout develop
 git merge images
 ```
-	Next I’ve merged “styles” into “develop” and got merge conflict in m1/task1.1/index.html.
+	- Next I’ve merged “styles” into “develop” and got merge conflict in m1/task1.1/index.html.
 	
 ![Image6](screenshots/Image6.jpg "Image6")
 
-	I’ve resolved it by editing index.html.
+	- I’ve resolved it by editing index.html.
 	
 ![Image7](screenshots/Image7.jpg "Image6")
 	
-	And then merging was successful:
+	- And then merging was successful:
 ```
 git add index.html
 git commit
