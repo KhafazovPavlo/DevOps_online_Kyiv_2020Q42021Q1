@@ -1,0 +1,16 @@
+f8fdbef (HEAD -> main, origin/main, origin/develop, origin/HEAD, develop) HEAD@{0}: merge develop: Fast-forward
+7f07d74 HEAD@{1}: checkout: moving from develop to main
+f8fdbef (HEAD -> main, origin/main, origin/develop, origin/HEAD, develop) HEAD@{2}: commit (merge): Merge branch 'styles' into develop
+0a79ad3 (origin/images, images) HEAD@{3}: merge images: Fast-forward
+12d7c95 HEAD@{4}: checkout: moving from styles to develop
+7199d44 (origin/styles, styles) HEAD@{5}: commit: changing index.html, adding styles from styles\styles.css
+06fc8f5 HEAD@{6}: commit: adding styles
+12d7c95 HEAD@{7}: checkout: moving from develop to styles
+12d7c95 HEAD@{8}: checkout: moving from images to develop
+0a79ad3 (origin/images, images) HEAD@{9}: commit: dded images in index.html
+b45b824 HEAD@{10}: commit: commiting images
+12d7c95 HEAD@{11}: checkout: moving from develop to images
+12d7c95 HEAD@{12}: commit: commiting index.html
+7f07d74 HEAD@{13}: checkout: moving from main to develop
+7f07d74 HEAD@{14}: commit: Initial project commit
+fb79187 HEAD@{15}: clone: from https://github.com/KhafazovPavlo/DevOps_online_Kyiv_2020Q42021Q1.git
