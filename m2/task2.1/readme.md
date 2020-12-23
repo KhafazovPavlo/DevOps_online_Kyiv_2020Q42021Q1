@@ -2,10 +2,14 @@
 
 ## Hypervisors
 
-	The most popular hypervisors for infrastructure virtualization are Citrix XenServer, Microsoft Hyper-V, Red Hat KVM, and VMware vSphere. They are the biggest players in the server virtualization market. 
+The most popular hypervisors for infrastructure virtualization are Citrix XenServer, Microsoft Hyper-V, Red Hat KVM, and VMware vSphere. They are the biggest players in the server virtualization market.
+
 Microsoft Hyper-V helps in expanding or establishing a private cloud environment. It promotes effective hardware utilization, improves business continuity, as well as makes development and test more efficient.
+
 KVM (Kernel-based Virtual Machine), a part of Red Hat Virtualization Suite, is a complete virtualization infrastructure solution. KVM turns Linux kernel into a hypervisor. It was merged into the Linux kernel mainline in kernel version 2.6.20.
+
 vSphere, the server virtualization platform of VMware, is a set of products that not only includes virtualization, but also management and interface layers. It provides a number of key components including infrastructure services (vCompute, vStorage, and vNetwork), application services, vCenter Server, vSphere Client, etc.
+
 Based on Xen Project Hypervisor, XenServer is an open-sourced bare-metal server virtualization platform. It consists of enterprise-grade features that help enterprises to easily handle workloads, combined OS, and networking configurations. XenServer provides improved virtualized graphics with NIVIDA and Intel and allows execution of multiple computer operating systems on same computer hardware.
 
 ### Comparison vSphere vs XenServer vs Hyper-V vs KVM
