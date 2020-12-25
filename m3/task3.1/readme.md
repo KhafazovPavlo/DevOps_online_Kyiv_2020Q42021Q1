@@ -74,7 +74,7 @@ The following statement selects only those groups with more than two messages:
 
 ### Creating new user with different privileges:
 
-_I had a issue with a validate_password plugin, to resolve this issue I've changed policy to low and special char count to 0.
+_I had a issue with a validate_password plugin, to resolve this issue I've changed policy to low and special char count to 0._
 
 ![Image22](screenshots/Image22.jpg "Image22")
 
