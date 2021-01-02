@@ -100,11 +100,13 @@ Testing network:
 
 ### Projects: 
 
-[project 4-2-1.pkt]('project 4-2-1.pkt')
+[project 4-2-1.pkt](https://github.com/KhafazovPavlo/DevOps_online_Kyiv_2020Q42021Q1/blob/main/m4/task4.2/project%204-2-1.pkt)
 
-[project 4-2-2.pkt]('project 4-2-2.pkt')
+[project 4-2-2.pkt](https://github.com/KhafazovPavlo/DevOps_online_Kyiv_2020Q42021Q1/blob/main/m4/task4.2/project%204-2-2.pkt)
 
-[project 4-2-3.pkt]('project 4-2-3.pkt')
+[project 4-2-3.pkt](https://github.com/KhafazovPavlo/DevOps_online_Kyiv_2020Q42021Q1/blob/main/m4/task4.2/project%204-2-3.pkt)
+
+
 
 
 
