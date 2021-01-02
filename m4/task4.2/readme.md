@@ -98,10 +98,13 @@ Testing network:
 
 ![36](screenshots/36.jpg "ping2")
 
-Projects: 
-[project 4-2-1.pkt] (project 4-2-1.pkt)
-[project 4-2-2.pkt] (project 4-2-2.pkt)
-[project 4-2-3.pkt] (project 4-2-3.pkt)
+### Projects: 
+
+![project 4-2-1.pkt] (project 4-2-1.pkt)
+
+![project 4-2-2.pkt] (project 4-2-2.pkt)
+
+![project 4-2-3.pkt] (project 4-2-3.pkt)
 
 
 
