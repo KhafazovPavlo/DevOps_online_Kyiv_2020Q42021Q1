@@ -140,11 +140,7 @@ The types of devices and how to determine the type of device:
 
 ![Image68](screenshots/68.jpg "68")
 
-Device files are denoted as the following:
-c - character
-b - block
-p - pipe
-s - socket
+Device files are denoted as the following: c - character; b - block; p - pipe; s - socket.
 
 The way to list block devices such as hard disks is using the command `lsblk`:
 
@@ -155,14 +151,7 @@ The `lshw` command lists the devices connected to your computer:
 ![Image70](screenshots/70.jpg "70")
 
 The `ls` command will show the file type as an encoded symbol found as the first character of the file permission part.
-Types of Linux files and that `ls` command identifiers:
-- : regular file
-d : directory
-c : character device file
-b : block device file
-s : local socket file
-p : named pipe
-l : symbolic link
+Types of Linux files and that `ls` command identifiers: - regular file; d directory; c character device file; b block device file; s local socket file; p named pipe; l symbolic link.
 
 ![Image72](screenshots/72.jpg "72")
 
