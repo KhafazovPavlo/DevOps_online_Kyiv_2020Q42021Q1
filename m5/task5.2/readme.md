@@ -7,13 +7,16 @@ When a user is created the following information is stored in **/etc/passwd** fi
 4. group ID number (GID) (but users can be in more groups too)
 5. comments (any text information, often user's full name, office, etc)
 6. home dir (absolute path, usually /home/$USER)
-7. shell to give the user at login (usually /bin/bash, the list of interpretators in etc/shells)
+7. shell to give the user at login (usually /bin/bash, the list of interpretators in etc/shells).
+
 This file requires root access for modification. Its content can be viewed by anyone. Using priviliged commands users can modify content related to their own account info (passwd, chsh, chfn). Encrypted passwords (hashed) are usually stored in etc/shadow, accessible only by root. 
+
 Groups allow a set of permissions to be assigned to group of users. Every file system object has group permissions, if you are not the owner of the object but are in that group then group permissions apply to you. File system objects have only one owner and can be in only one group. Logged in users can be members of multiple groups. Group information is maintained in etc/group and etc/gshadow (but at login every user is given an initial GID from the passwd file). When a group is created on the system, the following information is stored in **/etc/group**:
 1. group name
 2. encrypted password ("x" indicating use of /etc/gshadow)
 3. group ID number (GID)
 4. list of usersids that are members of that group
+
 Modification can be done by root or by the group admin for a group. Can be viewed by anyone. Encrypted passwords (hashed) are stored in /etc/gshadow, accessible by root. 
 
 ![Image1](screenshots/1.jpg "1")
