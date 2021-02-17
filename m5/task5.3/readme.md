@@ -260,7 +260,6 @@ Copying file from Windows host to Ubuntu VM1 using `scp` command:
 
 
 
-
 ## 2.
 
 SSH settings to increase the security:
@@ -273,6 +272,40 @@ Change the default SSH port (by default most servers listen for SSH connections 
 
 ![Image77](screenshots/77.jpg "77")
 
+Disable server SSH root Login, it is important to add the user account we use to log in, we are using SSH keys for SSH authentication, and can disable the server password.
+
+![Image78](screenshots/78.jpg "78")
+
+* Set firewall rules to restrict the incoming SSH traffic for everyone but one IP address.
+
+![Image79](screenshots/79.jpg "79")
+
+## 3.
+
+`ssh-keygen -t type`, where type is either of dsa,rsa and ecdsa. In practice, a RSA key will work everywhere. ECDSA support is newer, so some old client or server may have trouble with ECDSA keys. A DSA key used to work everywhere, as per the SSH standard (RFC 4251 and subsequent), but this changed - OpenSSH 7.0 and higher no longer accept DSA keys by default.
+ECDSA is computationally lighter, but you'll need a really small client or server (say 50 MHz embedded ARM processor) to notice the difference. Right now, there is no security-related reason to prefer one type over any other, assuming large enough keys (2048 bits for RSA or DSA, 256 bits for ECDSA); key size is specified with the `-b` parameter. However, some ssh-keygen versions may reject DSA keys of size other than 1024 bits, which is currently unbroken, but arguably not as robust as could be wished for. To sum this up, `ssh-keygen -t rsa -b 2048` will be good desicion.
+
+![Image80](screenshots/80.jpg "80")
+
+The 4096 key is more secure but also comes with an overhead in CPU time on both server and client to encrypt and decrypt with the bigger key. To learn about the extra time used with larger key sizes, we can use the `openssl` command. This has an inbuilt speed test, so we can test the speed of using 1024, 2048 and 4096 bit keys. 
+
+![Image82](screenshots/82.jpg "82")
+
+![Image81](screenshots/81.jpg "81")
+
+_From the output: on a 2048 bit key we can sign 1,031 requests per second but only 161 with a 4096 bit key._
+
+To create key with more modern algorithm (ed25519 - Edwards Twisted Curve algorithm, 256 bit ), encrypt this key multiple times ( in our case 250), add a comment to help identify the key’s purpose. If we want to check the key size and the comment then we can use  ssh-keygen with  -l -f options. 
+
+![Image83](screenshots/83.jpg "83")
+
+## 4.
+
+Port forwarding for the SSH client from the host machine to the guest Linux virtual machine behind NAT.
+
+![Image84](screenshots/84.jpg "84")
+
+![Image85](screenshots/85.jpg "85")
 
 
 

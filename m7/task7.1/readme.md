@@ -8,7 +8,7 @@
 
 ## B. Using Apache log example create a script to answer the following questions:
 
-![Image2](screenshots/2.jpg "2")
+![Image2](screenshots/2.jpg "2") ![Image20](screenshots/20.jpg "20")
 
 ![Image21](screenshots/21.jpg "21")
 
