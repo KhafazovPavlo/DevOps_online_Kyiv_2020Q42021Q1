@@ -30,7 +30,7 @@ To count consonants:
 
 ![Image7](screenshots/7.jpg "count cons")
 
-_I've got a problem when was trying to count consonants because of noletter symbols. To corect this mistake used: converting entire string to lower case to reduce the comparisons, then hecking whether a character is a vowel and reducing counting range exceptionally to letters (from a to z) `elif (str[i] >= 'a' and str[i] <= 'z')`:
+_I've got a problem when was trying to count consonants because of noletter symbols. To corect this mistake used: converting entire string to lower case to reduce the comparisons, then hecking whether a character is a vowel and reducing counting range exceptionally to letters (from a to z) `elif (str[i] >= 'a' and str[i] <= 'z')`:_
 
 ![Image8](screenshots/8.jpg "count cons right")
 
