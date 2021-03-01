@@ -20,3 +20,25 @@ Results:
 ![Image0](screenshots/5.jpg "5")
 
 ![Image0](screenshots/6.jpg "6")
+
+Pulling files fro GitHub and deploying to Apache server VM:
+
+ ![Image0](screenshots/71.jpg "6")
+ 
+ ![Image0](screenshots/72.jpg "6")
+ 
+ ![Image0](screenshots/73.jpg "6")
+ 
+ ![Image0](screenshots/74.jpg "6")
+ 
+ ![Image0](screenshots/75.jpg "6")
+ 
+ ![Image0](screenshots/76.jpg "6")
+ 
+ ![Image0](screenshots/77.jpg "6")
+ 
+ ![Image0](screenshots/78.jpg "6")
+ 
+ 
+ 
+ 
