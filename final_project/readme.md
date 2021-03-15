@@ -1,10 +1,10 @@
-### Final Project
+# Final Project
 
 ## Description
 
-In this project I'm implementing *CI/CD* using *Git, Jenkins, Ansible and Docker*. Developer will commit his changes to Git which triggers (Webhook) Jenkins pipline job, it pulls code from Github, builds the java application using Maven, builds Docker image and uploads it to Docker Hub, then usin Ansible playbook deploy Docker container to Web Server.
+In this project I'm implementing **CI/CD** using **Git, Jenkins, Ansible and Docker**. Developer will commit his changes to Git which triggers (Webhook) Jenkins pipline job, it pulls code from Github, builds the java application using Maven, builds Docker image and uploads it to Docker Hub, then usin Ansible playbook deploy Docker container to Web Server.
 
-I'm using *Terraform* to create Jenkins and Web Servers, and to install required tool (Ansible, Docker, Git) on Jenkins Server.
+I'm using **Terraform** to create Jenkins and Web Servers, and to install required tool (Ansible, Docker, Git) on Jenkins Server.
 
 ![Image1p](screenshots/1p.jpg "schema")
 
