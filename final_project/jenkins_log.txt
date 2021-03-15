@@ -1,0 +1,244 @@
+Started by GitHub push by KhafazovPavlo
+Running in Durability level: MAX_SURVIVABILITY
+[Pipeline] Start of Pipeline
+[Pipeline] properties
+[Pipeline] node
+Running on Jenkins in /var/lib/jenkins/workspace/devops-project
+[Pipeline] {
+[Pipeline] git
+The recommended git tool is: NONE
+No credentials specified
+ > git rev-parse --is-inside-work-tree # timeout=10
+Fetching changes from the remote Git repository
+ > git config remote.origin.url https://github.com/KhafazovPavlo/final_project.git # timeout=10
+Fetching upstream changes from https://github.com/KhafazovPavlo/final_project.git
+ > git --version # timeout=10
+ > git --version # 'git version 2.23.3'
+ > git fetch --tags --force --progress -- https://github.com/KhafazovPavlo/final_project.git +refs/heads/*:refs/remotes/origin/* # timeout=10
+ > git rev-parse refs/remotes/origin/master^{commit} # timeout=10
+Checking out Revision aaec1c9b3fee01cadde8a79d2f1eb5bc7a1bb918 (refs/remotes/origin/master)
+ > git config core.sparsecheckout # timeout=10
+ > git checkout -f aaec1c9b3fee01cadde8a79d2f1eb5bc7a1bb918 # timeout=10
+ > git branch -a -v --no-abbrev # timeout=10
+ > git branch -D master # timeout=10
+ > git checkout -b master aaec1c9b3fee01cadde8a79d2f1eb5bc7a1bb918 # timeout=10
+Commit message: "some changes"
+ > git rev-list --no-walk 1636a78f60c565287b4702a953a78a4b9bf3d19e # timeout=10
+[Pipeline] }
+[Pipeline] // node
+[Pipeline] node
+Running on Jenkins in /var/lib/jenkins/workspace/devops-project
+[Pipeline] {
+[Pipeline] stage
+[Pipeline] { (Declarative: Tool Install)
+[Pipeline] tool
+[Pipeline] envVarsForTool
+[Pipeline] }
+[Pipeline] // stage
+[Pipeline] withEnv
+[Pipeline] {
+[Pipeline] stage
+[Pipeline] { (SCM)
+[Pipeline] tool
+[Pipeline] envVarsForTool
+[Pipeline] withEnv
+[Pipeline] {
+[Pipeline] git
+The recommended git tool is: NONE
+using credential github
+ > git rev-parse --is-inside-work-tree # timeout=10
+Fetching changes from the remote Git repository
+ > git config remote.origin.url https://github.com/KhafazovPavlo/final_project # timeout=10
+Fetching upstream changes from https://github.com/KhafazovPavlo/final_project
+ > git --version # timeout=10
+ > git --version # 'git version 2.23.3'
+using GIT_ASKPASS to set credentials github
+ > git fetch --tags --force --progress -- https://github.com/KhafazovPavlo/final_project +refs/heads/*:refs/remotes/origin/* # timeout=10
+ > git rev-parse refs/remotes/origin/master^{commit} # timeout=10
+Checking out Revision aaec1c9b3fee01cadde8a79d2f1eb5bc7a1bb918 (refs/remotes/origin/master)
+ > git config core.sparsecheckout # timeout=10
+ > git checkout -f aaec1c9b3fee01cadde8a79d2f1eb5bc7a1bb918 # timeout=10
+ > git branch -a -v --no-abbrev # timeout=10
+ > git branch -D master # timeout=10
+ > git checkout -b master aaec1c9b3fee01cadde8a79d2f1eb5bc7a1bb918 # timeout=10
+Commit message: "some changes"
+[Pipeline] }
+[Pipeline] // withEnv
+[Pipeline] }
+[Pipeline] // stage
+[Pipeline] stage
+[Pipeline] { (Maven Build)
+[Pipeline] tool
+[Pipeline] envVarsForTool
+[Pipeline] withEnv
+[Pipeline] {
+[Pipeline] sh
++ mvn clean package
+[INFO] Scanning for projects...
+[INFO] 
+[INFO] ---------------------------< in.project:app >---------------------------
+[INFO] Building dockeransible Maven Webapp 1.0-SNAPSHOT
+[INFO] --------------------------------[ war ]---------------------------------
+[INFO] 
+[INFO] --- maven-clean-plugin:2.5:clean (default-clean) @ app ---
+[INFO] Deleting /var/lib/jenkins/workspace/devops-project/target
+[INFO] 
+[INFO] --- maven-resources-plugin:2.6:resources (default-resources) @ app ---
+[WARNING] Using platform encoding (UTF-8 actually) to copy filtered resources, i.e. build is platform dependent!
+[INFO] skip non existing resourceDirectory /var/lib/jenkins/workspace/devops-project/src/main/resources
+[INFO] 
+[INFO] --- maven-compiler-plugin:3.1:compile (default-compile) @ app ---
+[INFO] No sources to compile
+[INFO] 
+[INFO] --- maven-resources-plugin:2.6:testResources (default-testResources) @ app ---
+[WARNING] Using platform encoding (UTF-8 actually) to copy filtered resources, i.e. build is platform dependent!
+[INFO] skip non existing resourceDirectory /var/lib/jenkins/workspace/devops-project/src/test/resources
+[INFO] 
+[INFO] --- maven-compiler-plugin:3.1:testCompile (default-testCompile) @ app ---
+[INFO] No sources to compile
+[INFO] 
+[INFO] --- maven-surefire-plugin:2.12.4:test (default-test) @ app ---
+[INFO] No tests to run.
+[INFO] 
+[INFO] --- maven-war-plugin:2.2:war (default-war) @ app ---
+[INFO] Packaging webapp
+[INFO] Assembling webapp [app] in [/var/lib/jenkins/workspace/devops-project/target/app]
+[INFO] Processing war project
+[INFO] Copying webapp resources [/var/lib/jenkins/workspace/devops-project/src/main/webapp]
+[INFO] Webapp assembled in [40 msecs]
+[INFO] Building war: /var/lib/jenkins/workspace/devops-project/target/app.war
+[INFO] WEB-INF/web.xml already added, skipping
+[INFO] ------------------------------------------------------------------------
+[INFO] BUILD SUCCESS
+[INFO] ------------------------------------------------------------------------
+[INFO] Total time:  2.470 s
+[INFO] Finished at: 2021-03-12T12:41:13Z
+[INFO] ------------------------------------------------------------------------
+[Pipeline] }
+[Pipeline] // withEnv
+[Pipeline] }
+[Pipeline] // stage
+[Pipeline] stage
+[Pipeline] { (Docker Build)
+[Pipeline] tool
+[Pipeline] envVarsForTool
+[Pipeline] withEnv
+[Pipeline] {
+[Pipeline] sh
++ docker build . -t pavelkhafazov/webapp:jenkins-devops-project-4
+Sending build context to Docker daemon  156.2kB
+
+Step 1/2 : FROM tomcat:8
+ ---> 5312f5b3bdcc
+Step 2/2 : COPY target/*.war /usr/local/tomcat/webapps/app.war
+ ---> 1bc5daa6a677
+Successfully built 1bc5daa6a677
+Successfully tagged pavelkhafazov/webapp:jenkins-devops-project-4
+[Pipeline] }
+[Pipeline] // withEnv
+[Pipeline] }
+[Pipeline] // stage
+[Pipeline] stage
+[Pipeline] { (DockerHub Push)
+[Pipeline] tool
+[Pipeline] envVarsForTool
+[Pipeline] withEnv
+[Pipeline] {
+[Pipeline] withCredentials
+Masking supported pattern matches of $dockerHubPwd
+[Pipeline] {
+[Pipeline] sh
+Warning: A secret was passed to "sh" using Groovy String interpolation, which is insecure.
+		 Affected argument(s) used the following variable(s): [dockerHubPwd]
+		 See https://jenkins.io/redirect/groovy-string-interpolation for details.
++ docker login -u pavelkhafazov -p ****
+WARNING! Using --password via the CLI is insecure. Use --password-stdin.
+WARNING! Your password will be stored unencrypted in /var/lib/jenkins/.docker/config.json.
+Configure a credential helper to remove this warning. See
+https://docs.docker.com/engine/reference/commandline/login/#credentials-store
+
+Login Succeeded
+[Pipeline] }
+[Pipeline] // withCredentials
+[Pipeline] sh
++ docker push pavelkhafazov/webapp:jenkins-devops-project-4
+The push refers to repository [docker.io/pavelkhafazov/webapp]
+5c0d22163144: Preparing
+9e0392850351: Preparing
+18f821102079: Preparing
+005f69aaeb10: Preparing
+9534dfec042a: Preparing
+fb0b25718816: Preparing
+e551c18d1724: Preparing
+da654bc8bc80: Preparing
+4ef81dc52d99: Preparing
+909e93c71745: Preparing
+7f03bfe4d6dc: Preparing
+fb0b25718816: Waiting
+e551c18d1724: Waiting
+da654bc8bc80: Waiting
+4ef81dc52d99: Waiting
+909e93c71745: Waiting
+7f03bfe4d6dc: Waiting
+9e0392850351: Layer already exists
+005f69aaeb10: Layer already exists
+9534dfec042a: Layer already exists
+18f821102079: Layer already exists
+e551c18d1724: Layer already exists
+da654bc8bc80: Layer already exists
+4ef81dc52d99: Layer already exists
+fb0b25718816: Layer already exists
+909e93c71745: Layer already exists
+7f03bfe4d6dc: Layer already exists
+5c0d22163144: Pushed
+jenkins-devops-project-4: digest: sha256:5dbcac2f150bd006e07cdff3666e6a84fa095607e31889a9c1603f8d89c35621 size: 2629
+[Pipeline] }
+[Pipeline] // withEnv
+[Pipeline] }
+[Pipeline] // stage
+[Pipeline] stage
+[Pipeline] { (Docker Deploy)
+[Pipeline] tool
+[Pipeline] envVarsForTool
+[Pipeline] withEnv
+[Pipeline] {
+[Pipeline] ansiblePlaybook
+[devops-project] $ /usr/bin/ansible-playbook deploy-docker.yml -i web.inv --private-key /var/lib/jenkins/workspace/devops-project/ssh6725283035356261510.key -u ec2-user -e BUILD_TAG=jenkins-devops-project-4
+
+PLAY [web] *********************************************************************
+
+TASK [Gathering Facts] *********************************************************
+[WARNING]: Platform linux on host 172.31.45.50 is using the discovered Python
+interpreter at /usr/bin/python, but future installation of another Python
+interpreter could change this. See https://docs.ansible.com/ansible/2.9/referen
+ce_appendices/interpreter_discovery.html for more information.
+ok: [172.31.45.50]
+
+TASK [Install python pip] ******************************************************
+ok: [172.31.45.50]
+
+TASK [Install docker] **********************************************************
+ok: [172.31.45.50]
+
+TASK [start docker] ************************************************************
+ok: [172.31.45.50]
+
+TASK [Install docker-py python module] *****************************************
+ok: [172.31.45.50]
+
+TASK [Start the container] *****************************************************
+changed: [172.31.45.50]
+
+PLAY RECAP *********************************************************************
+172.31.45.50               : ok=6    changed=1    unreachable=0    failed=0    skipped=0    rescued=0    ignored=0   
+
+[Pipeline] }
+[Pipeline] // withEnv
+[Pipeline] }
+[Pipeline] // stage
+[Pipeline] }
+[Pipeline] // withEnv
+[Pipeline] }
+[Pipeline] // node
+[Pipeline] End of Pipeline
+Finished: SUCCESS
