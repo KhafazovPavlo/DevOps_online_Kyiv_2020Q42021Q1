@@ -6,7 +6,7 @@ In this project I'm implementing **CI/CD** using **Git, Jenkins, Ansible and Doc
 
 I'm using **Terraform** to create Jenkins and Web Servers, and to install required tool (Ansible, Docker, Git) on Jenkins Server.
 
-![Image1p](screenshots/1p.jpg "schema")
+![Image1](screenshots/p1.png "schema")
 
 ## Creating infrastructure
 
