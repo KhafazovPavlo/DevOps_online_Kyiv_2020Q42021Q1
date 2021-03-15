@@ -115,7 +115,7 @@ Adding credentials for Docker Hub (to be able push an image) using Snippet Gener
 
 Ansible playbook (to install python, Docker and run container)
 
-![Image19](screenshots/086.png "19")
+![Image19](screenshots/186.png "19")
 
 Configure Ansible tool.
 
@@ -124,7 +124,7 @@ Configure Ansible tool.
 
 Configuring Webhook (when push event is triggered, it'll send a HTTP POST payload to the webhook's configured URL of Jenkins Server to start pipeline job).
 
-![Image23](screenshots/023.png "23")
+![Image23](screenshots/025.png "23")
 
 Final Project structure.
 
@@ -154,9 +154,9 @@ Docker Hub.
 
 ![Image033](screenshots/033.png "33")
 
-Jenkins console output log [link](jenkins_log.txt)
+Jenkins console output log [jenkins_log.txt](jenkins_log.txt)
 
-*Final Project repository* [link2](https://github.com/KhafazovPavlo/final_project)
+**Final Project repository** [https://github.com/KhafazovPavlo/final_project](https://github.com/KhafazovPavlo/final_project)
 
 
 
